@@ -1,11 +1,10 @@
-# <img src="public/icons/icon_48.png" width="45" align="left"> Xxx Blocker
-
-My Chrome Extension
+# <img src="public/icons/icon_48.png" width="45" align="left">  XXX Blocker
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Blur NSFW(Not Safe For Work) words.
+- Block rendering NSFW images.
+- Block loading of known pornograhic websites.
 
 ## Install
 
