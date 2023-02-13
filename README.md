@@ -4,7 +4,7 @@
 
 - Blur NSFW(Not Safe For Work) words.
 - Block rendering NSFW images.
-- Block loading of known pornograhic websites.
+- Redirect requests to known pornograhic websites.
 
 ## Install
 
