@@ -1,0 +1,6 @@
+.nsfw {
+  --blur-radius: 9px;
+
+  filter: blut(var(--blur-radius)) !important;
+  -webkit-filter: blur(var(--blur-radius)) !important;
+}
