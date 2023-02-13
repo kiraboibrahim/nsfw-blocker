@@ -20,6 +20,7 @@
   "host_permissions": ["http://*/*", "https://*/*"],
   "content_scripts": [
     {
+      "run_at": "document_start",
       "matches": ["<all_urls>"],
       "css": ["content.css"],
       "js": ["content.js"]
