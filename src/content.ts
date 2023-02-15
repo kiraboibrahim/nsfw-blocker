@@ -2,6 +2,8 @@ let BadWordsFilter = require('bad-words');
 
 import { stemmer } from 'stemmer';
 
+// For nsfw.css to be emitted, It has to be imported here
+import "./nsfw.css";
 
 class NSFWWordsFilter {
   protected bad_words_filter = new BadWordsFilter();

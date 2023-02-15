@@ -2,8 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My Chrome Extension</title>
+    <title>XXX Blocker</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
     <link rel="stylesheet" href="popup.css" />
   </head>
-  <body></body>
+  <body>
+    <form class="nsfw-domain-add-form mb-2 d-flex p-2 pt-4">
+      <input class="form-control form-control-sm nsfw-domain-add-form__domain" type="text" name="domain" pattern="^(?=.*{4,253}$)((?!-)([A-Za-z0-9]{1,63}(?<!-)\.)+[A-Za-z]{2,6}$)" placeholder="www.example.com" required="required">
+      <button class="btn btn-sm btn-outline-primary ms-2" type="submit">Block</button>
+    </form>
+    <hr class="divider" />
+
+    <h1 class="ps-2 mt-4 title">BLOCKED WEBSITES</h1>
+    <form class="nsfw-domain-search-form mb-3 p-2 pb-1">
+      <input class="form-control form-control-sm nsfw-domain-search-form__query" type="search" name="query" placeholder="Start typing to search">
+    </form>
+    <ul class="nsfw-list p-2 pt-1">
+      <li class="nsfw-list__domain pb-2">xvideos.com</li>
+      <li class="nsfw-list__domain pb-2">xnxx.com</li>
+      <li class="nsfw-list__domain pb-2">milf.com</li>
+      <li class="nsfw-list__domain pb-2">xvideos.com</li>
+      <li class="nsfw-list__domain pb-2">xnxx.com</li>
+      <li class="nsfw-list__domain pb-2">milf.com</li>
+      <li class="nsfw-list__domain pb-2">xvideos.com</li>
+      <li class="nsfw-list__domain pb-2">xnxx.com</li>
+      <li class="nsfw-list__domain pb-2">milf.com</li>
+      <li class="nsfw-list__domain pb-2">xvideos.com</li>
+      <li class="nsfw-list__domain pb-2">xnxx.com</li>
+      <li class="nsfw-list__domain pb-2">milf.com</li>
+    </ul>
+  </body>
 </html>
