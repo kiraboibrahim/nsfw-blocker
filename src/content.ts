@@ -10,7 +10,7 @@ class NSFWWordsFilter {
 
   constructor() {}
 
-  async watch() {
+  watch() {
     let callback = (mutation_list: MutationRecord[], observer: MutationObserver): void => {
       for(let mutation of mutation_list) {
         if(mutation.type == "childList" && mutation.addedNodes.length > 0)
@@ -20,7 +20,7 @@ class NSFWWordsFilter {
     let observer: MutationObserver = new MutationObserver(callback);
     observer.observe(document.body, {childList: true, subtree: true, characterData: true});
   }
-  async filter(root: Node = document.body) {
+  filter(root: Node = document.body) {
     let text_node_walker = this.traverse_text_nodes_under(root);
     let text_node: Node | null = text_node_walker.nextNode();
     while(text_node) {
@@ -43,8 +43,7 @@ class NSFWWordsFilter {
     let accept_node = (node: Node) => {
       return NSFWWordsFilter.is_script_node(node) || NSFWWordsFilter.is_text_node_empty(node) || NSFWWordsFilter.is_text_node_checked(node) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
     }
-    let tree_walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {acceptNode: accept_node})
-    return tree_walker;
+    return document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {acceptNode: accept_node});
   }
 
   static is_script_node(node: Node): boolean {
@@ -63,8 +62,12 @@ class NSFWWordsFilter {
   }
 }
 
-window.addEventListener("DOMContentLoaded", (event: Event) => {
+document.addEventListener("DOMContentLoaded", (event:Event) => {
+  filter_nsfw_words();
+});
+
+function filter_nsfw_words() {
   let nsfw_words_filter = new NSFWWordsFilter();
   nsfw_words_filter.filter();
-  nsfw_words_filter.watch();
-});
+  // nsfw_words_filter.watch(); // Watching for DOM changes is expensive and may slow down page load
+}
