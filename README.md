@@ -1,10 +1,10 @@
-# <img src="public/icons/icon_48.png" width="45" align="left">  XXX Blocker
+# <img src="public/icons/icon_48.png" width="45" align="left">  NSFW Blocker
 
 ## Features
 
 - Blur NSFW(Not Safe For Work) words.
 - Block rendering NSFW images.
-- Redirect requests to known pornograhic websites.
+- Redirect requests to known pornographic websites.
 
 ## Install
 

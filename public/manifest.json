@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "XXX Blocker",
+  "name": "NSFW Blocker",
   "version": "0.1.0",
-  "description": "Blocks NSFW(Not Safe For Work) Content and websites",
+  "description": "Blocks NSFW(Not Safe For Work) content(Images and Text) and websites",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
@@ -13,7 +13,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "XXX Blocker",
+    "default_title": "NSFW Blocker",
     "default_popup": "popup.html"
   },
   "permissions": ["activeTab", "declarativeNetRequest"],
