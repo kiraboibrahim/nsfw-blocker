@@ -26,7 +26,6 @@
   "dependencies": {
     "bad-words": "^3.0.4",
     "bootstrap": "^5.2.3",
-    "jquery": "^3.6.3",
     "stemmer": "^2.0.1"
   }
 }
